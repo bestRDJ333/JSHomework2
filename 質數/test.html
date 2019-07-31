@@ -1,0 +1,54 @@
+&nbsp;
+<script src="HomeworkPrime_number.js"></script>
+
+<script>
+    function getID() {
+      
+
+        let number = document.getElementById('number').value;
+        let prime = Prime(number);
+
+        let body = document.createElement('body');
+        document.body = body;
+        let table = document.createElement('table');
+        body.appendChild(table);
+        table.setAttribute('border', '1');
+        table.setAttribute('width', '100%');5
+
+        for (let k = 0; k < number; k++) {
+            
+            let tr = document.createElement('tr');
+            table.appendChild(tr);
+            for (let i = 2; i <= 5; i++) {
+                
+                let td = document.createElement('td');
+                tr.appendChild(td);
+
+                for (let j in prime) {
+                    td.innerHTML = prime[j]
+                    
+                }
+            }
+        }
+
+        
+
+
+    }
+
+
+</script>
+
+
+
+
+<input type="number" id="number" placeholder="輸入一數值"><br>
+<br>
+<input type="button" id="bnt" value="Enter" onclick="getID()">
+<br>
+生成之質數
+<hr>
+<br>
+<br>
+<span id="test"></span>
+
